@@ -1,0 +1,12 @@
+#Welcome {
+   padding-top: 75px;
+   h1 {
+      margin: auto;
+   }
+}
+
+@media screen and (max-width: 992px) {
+   #Welcome {
+      padding-top: 60px;
+   }
+}

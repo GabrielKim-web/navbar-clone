@@ -1,0 +1,14 @@
+#Welcome {
+  padding-top: 75px;
+}
+
+#Welcome h1 {
+  margin: auto;
+}
+
+@media screen and (max-width: 992px) {
+  #Welcome {
+    padding-top: 60px;
+  }
+}
+/*# sourceMappingURL=Welcome.css.map */

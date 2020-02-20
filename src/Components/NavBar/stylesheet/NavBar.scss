@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+
+%center {
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+}
+
+#NavBar {
+   width: 100vw - 16vw;
+   height: 75px;
+   padding: 0 8vw;
+   top: 0;
+   position: fixed;
+   display: flex;
+   background-color: transparent;
+   justify-content: space-between;
+   a {
+      text-decoration: none;
+   }
+}
+
+.logo {
+   @extend %center;
+}
+
+.icon {
+   @extend %center;
+   font-family: 'Kaushan Script', cursive;
+   color: #fed136;
+   height: 50px;
+   font-size: 40px;
+}
+
+.button-container {
+   display: flex;
+   @extend %center;
+   height: 100%;
+   margin: 0;
+   li {
+      list-style-type: none;
+      margin: 20px;
+      color: white;
+   }
+}
+
+.mobile-nav {
+   transition: transform 0.5s;
+   width: 100vw;
+   position: absolute;
+   display: flex;
+   z-index: 50;
+   .mobile-button-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 0;
+      margin: 5px;
+   }
+   li {
+      list-style-type: none;
+      margin: 10px 0;
+      color: white;
+   }
+}
+
+.closed {
+   background-color: rgba(65, 65, 65, 0.2);
+   transform: translateY(-300px);
+}
+
+.opened {
+   background-color: rgba(65, 65, 65, 0.2);
+   transform: translateY(60px);
+   z-index: 1;
+}
+
+.hamburger {
+   height: 50px;
+   // media query below will show this button when screen is narrow enough
+   display: none;
+   z-index: 1;
+   cursor: pointer;
+}
+
+@media screen and (max-width: 992px){
+   .icon {
+      font-size: 24px;
+   }
+   #NavBar {
+      height: 60px;
+      background-color: rgba(65, 65, 65, 0.2)
+   }
+   .button-container {
+      display: none;
+   }
+
+   .hamburger {
+      display: block;
+      margin: auto 0;
+   }
+}
